@@ -7,6 +7,7 @@ public class Guest {
     public static final String ROOM = "roomNumber";
     public static final String START = "startTimestamp";
     public static final String END = "endTimestamp";
+    public static final String RESERVATION = "reservation";
 
     public class Reservation {
         private long roomNumber;
@@ -47,7 +48,7 @@ public class Guest {
     private String lastName;
 
     // assuming one reservation per guest
-    private Reservation reservation;
+    public Reservation reservation;
 
     public Guest() {
         this.reservation = new Reservation();
@@ -75,14 +76,6 @@ public class Guest {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public Reservation getReservation() {
-        return reservation;
-    }
-
-    public void setReservation(Reservation reservation) {
-        this.reservation = reservation;
     }
 
 }
