@@ -1,0 +1,15 @@
+{
+  "name": "ExampleTemplate",
+  "guestVariables": [
+    "firstName", "lastName", "roomNumber", "startTimestamp", "endTimestamp"
+  ],
+  "companyVariables": [
+    "company", "city", "timezone"
+  ],
+
+  "timeGreeting" : "time",
+
+  "message" :
+          "Good $time, $firstName $lastName! Your reservation with $company is in room $roomNumber, and you'll have it from $startTimestamp to $endTimestamp ($timezone)."
+
+}
