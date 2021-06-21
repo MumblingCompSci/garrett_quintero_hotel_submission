@@ -1,4 +1,3 @@
-import org.apache.commons.lang.StringEscapeUtils;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
