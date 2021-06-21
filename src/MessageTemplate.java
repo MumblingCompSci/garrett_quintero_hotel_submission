@@ -2,6 +2,13 @@ import java.util.ArrayList;
 
 public class MessageTemplate {
 
+    // strings to keep from misspelling expected keys
+    public static final String NAME = "name";
+    public static final String GUEST_VARIABLES = "guestVariables";
+    public static final String COMPANY_VARIABLES = "companyVariables";
+    public static final String TIME = "timeGreeting";
+    public static final String MESSAGE = "message";
+
     private String messageString;
     private ArrayList<String> guestVariables;
     private ArrayList<String> companyVariables;
