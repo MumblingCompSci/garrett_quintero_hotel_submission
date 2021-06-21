@@ -7,9 +7,12 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Set;
 
 public class GuestLoader {
     private HashMap<Long, Guest> guests = new HashMap<>(); // id, guest
+
+    public Set<Long> guests() { return guests.keySet(); }
 
     public void load(String filename) throws ParseException, IOException {
         JSONParser parser = new JSONParser();

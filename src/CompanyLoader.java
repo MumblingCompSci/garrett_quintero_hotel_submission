@@ -8,9 +8,12 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Set;
 
 public class CompanyLoader {
     private HashMap<Long, Company> companies = new HashMap<>(); // id, company
+
+    public Set<Long> companies() { return companies.keySet(); }
 
     public Company getCompany(Long companyID) {
         if (companies.containsKey(companyID)) return companies.get(companyID);

@@ -3,7 +3,6 @@ import org.json.simple.JSONObject;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -12,7 +11,7 @@ public class TemplateMaker {
     //TODO: I want to make it so that you don't have to have a time variable if you dont want to
         // but I haven't quite figured out optional/blank variables and JSON
 
-    public void makeTemplate() {
+    public static void makeTemplate() {
         JSONObject template = new JSONObject();
         Scanner scanner = new Scanner(System.in);
 

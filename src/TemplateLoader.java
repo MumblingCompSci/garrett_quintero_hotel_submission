@@ -8,9 +8,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Set;
 
 public class TemplateLoader {
-    private HashMap<String, MessageTemplate> templates; //name, template
+    private HashMap<String, MessageTemplate> templates = new HashMap<>(); //name, template
 
     public MessageTemplate getTemplate(String templateName) {
         if (templates.containsKey(templateName)) return templates.get(templateName);
@@ -44,5 +45,9 @@ public class TemplateLoader {
 
         templates.put(template.getName(), template);
         System.out.println("Loaded template: " + template.getName());
+    }
+
+    public Set<String> templates() {
+        return templates.keySet();
     }
 }
