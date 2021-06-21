@@ -4,20 +4,23 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.HashMap;
 
 public class GuestLoader {
-    private HashMap<Long, Guest> guests; // id, guest
+    private HashMap<Long, Guest> guests = new HashMap<>(); // id, guest
 
-    public void load(String filename) throws ParseException {
+    public void load(String filename) throws ParseException, IOException {
         JSONParser parser = new JSONParser();
 
         // generates working directory path + file name
-        String path = (new File("").getAbsolutePath())
+        String path = (new File("").getAbsolutePath()) + "/"
                 + filename;
+        System.out.println("Using: " + path);
 
         // guests.json is structured as an array of guests containing another array representing their reservation
-        JSONArray guestArray = (JSONArray) parser.parse(path);
+        JSONArray guestArray = (JSONArray) parser.parse(new FileReader(path));
 
         int count = 0;
         for (Object guestObject : guestArray) {

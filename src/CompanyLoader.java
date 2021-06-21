@@ -4,22 +4,25 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.HashMap;
 
 public class CompanyLoader {
-    private HashMap<Long, Company> companies; // id, company
+    private HashMap<Long, Company> companies = new HashMap<>(); // id, company
 
     public Company getCompany(Long companyID) {
         if (companies.containsKey(companyID)) return companies.get(companyID);
         else return null;
     }
 
-    public void load(String fileName) throws ParseException {
-        String path = (new File("").getAbsolutePath())
+    public void load(String fileName) throws ParseException, IOException {
+        String path = (new File("").getAbsolutePath()) + "/"
                 + fileName;
 
         JSONParser parser = new JSONParser();
-        JSONArray companyArray = (JSONArray) parser.parse(path);
+        JSONArray companyArray = (JSONArray) parser.parse(new FileReader(path));
 
         int count = 0;
         for (Object companyObject : companyArray) {
