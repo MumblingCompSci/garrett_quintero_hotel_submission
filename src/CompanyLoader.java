@@ -7,7 +7,12 @@ import java.io.File;
 import java.util.HashMap;
 
 public class CompanyLoader {
-    public HashMap<Long, Company> companies; // id, company
+    private HashMap<Long, Company> companies; // id, company
+
+    public Company getCompany(Long companyID) {
+        if (companies.containsKey(companyID)) return companies.get(companyID);
+        else return null;
+    }
 
     public void load(String fileName) throws ParseException {
         String path = (new File("").getAbsolutePath())
