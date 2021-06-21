@@ -7,7 +7,7 @@ That should start the version of this project that took approximately 5 hours of
 When prompted for the files you would like to use, the application should process the filename you provide relative 
 to where you are running it.
 
-For the version of my code that went into this JAR, see commit ` e0c2aa59af6a8d1c2c5294293d2dcd96b4364755 `
+For the version of my code that went into this JAR, see commit ` 348391dfedb24489002ec33db25df409236f995a `
 
 I plan to continue working on this project for my own exercise. There will be a v2 version of the MessageTemplateMaker 
 JAR once I feel happy with what it can do.
