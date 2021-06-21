@@ -1,9 +1,21 @@
 
 public class Guest {
+
+    public static final String ID = "id";
+    public static final String FIRST = "firstName";
+    public static final String LAST = "lastName";
+    public static final String ROOM = "roomNumber";
+    public static final String START = "startTimestamp";
+    public static final String END = "endTimestamp";
+
     public class Reservation {
         private long roomNumber;
         private long startTimestamp;
         private long endTimestamp;
+
+        public Reservation() {
+            roomNumber = startTimestamp = endTimestamp = 0L;
+        }
 
         public long getRoomNumber() {
             return roomNumber;
@@ -36,6 +48,10 @@ public class Guest {
 
     // assuming one reservation per guest
     private Reservation reservation;
+
+    public Guest() {
+        this.reservation = new Reservation();
+    }
 
     public long getId() {
         return id;
