@@ -17,10 +17,10 @@ public class GuestLoader {
                 + filename;
 
         // guests.json is structured as an array of guests containing another array representing their reservation
-        JSONArray jarray = (JSONArray) parser.parse(path);
+        JSONArray guestArray = (JSONArray) parser.parse(path);
 
         int count = 0;
-        for (Object guestObject : jarray) {
+        for (Object guestObject : guestArray) {
             Guest guest = new Guest();
             guest.setId((Long) ((JSONObject) guestObject).get(Guest.ID)); // set guest ID
 

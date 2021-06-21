@@ -5,6 +5,11 @@ public class Company {
     private String city;
     private String timezone;
 
+    public static final String ID = "id";
+    public static final String NAME = "company";
+    public static final String CITY = "city";
+    public static final String TIMEZONE = "timezone";
+
     public long getId() {
         return id;
     }
